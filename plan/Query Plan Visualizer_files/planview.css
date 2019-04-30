@@ -1,0 +1,132 @@
+/*
+ * planview -- Query Plan Visualizer
+ * Copyright (C) 2010  Daniele Varrazzo
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+body {
+  overflow-y: scroll;
+  font-family: "Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+
+h2 {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+h3 {
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+  margin-left: 1em;
+}
+
+p {
+  font-size: small;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+#output-area {
+  position: relative;
+  background-color: #be0;
+  border: 1px solid black;
+  height: auto;
+  padding: 5px 0;
+  margin-top: 1em;
+  font-family: arial,sans-serif;
+}
+
+#output-area h2 {
+  margin: 0.25em 1em;
+}
+
+div.bar-chart {
+  position: relative;
+}
+
+div.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.bar {
+  position: absolute;
+  background-color: #44f;
+  border: 1px solid #00f;
+  white-space: nowrap;
+}
+
+div.label-ctr {
+  position: absolute;
+  white-space: nowrap;
+  text-align: right;
+}
+
+span.label {
+  margin: 0 20px;
+  font-size: 80%;
+}
+
+div.tooltip {
+  display: none;
+}
+
+/* These two rules are the original values from jquery.tooltip.css */
+#tooltip {
+  position: absolute;
+  z-index: 3000;
+  border: 1px solid #111;
+  background-color: #eee;
+  padding: 5px;
+  opacity: 0.85;
+}
+#tooltip h3, #tooltip div { margin: 0; }
+
+body #tooltip {
+  background-color: #ffe;
+  font-size: 80%;
+}
+
+body #tooltip p {
+  text-indent: -5em;
+  padding-left: 5em;
+  margin: 0;
+}
+
+#tooltip .bad {
+  color: maroon;
+}
+
+.copyright {
+  margin-top: 1em;
+}
+
+.copyright p {
+  color: #888;
+  font-size: 75%;
+}
+
+.copyright img {
+  border: none;
+  float: right;
+}
+
+.copyright hr {
+  border: 1px solid #888;
+  color: #888;
+  width: 100%;
+  height: 1px;
+}
